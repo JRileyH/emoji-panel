@@ -340,7 +340,7 @@ export class EmojiArea {
     ) {
       return;
     }
-
+    if (!this.headerOffsets) return;
     let closestHeaderIndex = this.headerOffsets.findIndex(
       offset => offset >= Math.round(this.emojis.scrollTop)
     );

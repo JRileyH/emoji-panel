@@ -83,29 +83,29 @@
 
   --blue-color: #4F81E5;
 
-  --border-color: #CCCCCC;
-  --background-color: #FFFFFF;
-  --text-color: #000000;
-  --secondary-text-color: #666666;
-  --hover-color: #E8F4F9;
-  --search-focus-border-color: var(--blue-color);
-  --search-icon-color: #CCCCCC;
+  --border-color: #0049c9;
+  --background-color: #60d7e8;
+  --text-color: #002361;
+  --secondary-text-color: #002361;
+  --hover-color: #26bcd7;
+  --search-focus-border-color: #003087;
+  --search-icon-color: #0049c9;
   --overlay-background-color: rgba(0, 0, 0, 0.8);
-  --popup-background-color: #FFFFFF;
-  --category-button-color: #666666;
-  --category-button-active-color: var(--blue-color);
+  --popup-background-color: #60d7e8;
+  --category-button-color: #002361;
+  --category-button-active-color: #003087;
 
-  --dark-border-color: #666666;
-  --dark-background-color: #333333;
-  --dark-text-color: #FFFFFF;
-  --dark-secondary-text-color: #999999;
-  --dark-hover-color: #666666;
-  --dark-search-background-color: #666666;
-  --dark-search-border-color: #999999;
-  --dark-search-placeholder-color: #999999;
-  --dark-search-focus-border-color: #DBE5F9;
-  --dark-popup-background-color: #333333;
-  --dark-category-button-color: #FFFFFF;
+  --dark-border-color: #0049c9;
+  --dark-background-color: #60d7e8;
+  --dark-text-color: #002361;
+  --dark-secondary-text-color: #002361;
+  --dark-hover-color: #26bcd7;
+  --dark-search-background-color:#60d7e8;
+  --dark-search-border-color: #002361;
+  --dark-search-placeholder-color: #002361;
+  --dark-search-focus-border-color: #002361;
+  --dark-popup-background-color: #002361;
+  --dark-category-button-color: #002361;
 
   --font: Arial, Helvetica, sans-serif;
   --font-size: 16px;
@@ -433,6 +433,14 @@ button.emoji-picker__category-button img {
 button.emoji-picker__category-button.active {
   color: var(--category-button-active-color);
   border-bottom: var(--category-border-bottom-size) solid var(--category-button-active-color);
+}
+
+.emoji-picker__search {
+  background: #6fe3ff;
+  color: #002361;
+}
+.emoji-picker__search::placeholder {
+  color: #003087;
 }
 
 @media (prefers-color-scheme: dark) {

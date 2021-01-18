@@ -48,7 +48,7 @@ const STYLE_TWEMOJI = 'twemoji';
 
 const DEFAULT_OPTIONS: EmojiButtonOptions = {
   position: 'auto',
-  autoHide: true,
+  autoHide: false,
   autoFocusSearch: true,
   showAnimation: true,
   showPreview: true,
@@ -110,6 +110,8 @@ export class EmojiButton {
 
   private emojiCategories: { [key: string]: EmojiRecord[] };
 
+  public emojis: Array<String> = [];
+
   constructor(options: EmojiButtonOptions = {}) {
     this.pickerVisible = false;
 
@@ -134,6 +136,16 @@ export class EmojiButton {
 
     this.buildPicker();
   }
+
+  addEmoji(emoji: string) {
+    this.emojis.push(emoji);
+  }
+
+  removeEmoji(idx: number = -1) {
+    if (idx === -1) idx = this.emojis.length - 1;
+    if (idx > -1) this.emojis.splice(idx, 1);
+  }
+
 
   /**
    * Adds an event listener to the picker.
@@ -404,6 +416,8 @@ export class EmojiButton {
     if (this.options.rootElement) {
       this.options.rootElement.appendChild(this.wrapper);
     }
+
+    document.getElementById("emoji-panel")?.appendChild(this.pickerEl)
 
     this.observeForLazyLoad();
   }
