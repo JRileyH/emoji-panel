@@ -138,6 +138,7 @@ export class EmojiButton {
   }
 
   addEmoji(emoji: string) {
+    if (this.emojis.length >= 20) return;
     this.emojis.push(emoji);
   }
 
